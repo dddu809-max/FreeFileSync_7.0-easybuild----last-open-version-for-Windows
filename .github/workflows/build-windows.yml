@@ -1,0 +1,31 @@
+name: Build FreeFileSync 7.0 Windows
+
+on:
+  workflow_dispatch:  # 手动触发按钮
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v2
+
+      # 如果是解决方案：把这一行改成你的 .sln 路径
+      # 比如：FreeFileSync/FreeFileSync.sln 或 直接 FreeFileSync.sln
+      - name: Build (Release x64)
+        run: msbuild FreeFileSync/FreeFileSync.sln /p:Configuration=Release /p:Platform=x64
+
+      # 如果你只看到 vcxproj 没有 sln，可以改成：
+      # run: msbuild FreeFileSync/FreeFileSync.vcxproj /p:Configuration=Release /p:Platform=x64
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: FreeFileSync-7.0-win64
+          path: |
+            **/x64/Release/*.exe
+            **/Release/*.exe
