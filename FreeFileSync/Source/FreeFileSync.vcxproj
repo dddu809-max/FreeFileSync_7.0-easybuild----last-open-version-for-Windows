@@ -202,17 +202,17 @@
     <ClCompile Include="..\..\wx+\grid.cpp" />
     <ClCompile Include="..\..\wx+\image_resources.cpp" />
     <ClCompile Include="..\..\wx+\image_tools.cpp" />
-    <ClCompile Include="..\..\wx+\mouse_move_dlg.cpp" />
+    <!-- <ClCompile Include="..\..\wx+\mouse_move_dlg.cpp" />  -->
     <ClCompile Include="..\..\wx+\popup_dlg.cpp" />
     <ClCompile Include="..\..\wx+\popup_dlg_generated.cpp" />
     <ClCompile Include="..\..\wx+\tooltip.cpp" />
     <ClCompile Include="..\..\wx+\zlib_wrap.cpp" />
-    <ClCompile Include="..\..\zen\dst_hack.cpp" />
+    <!-- <ClCompile Include="..\..\zen\dst_hack.cpp" /> -->
     <ClCompile Include="..\..\zen\file_access.cpp" />
     <ClCompile Include="..\..\zen\file_io.cpp" />
     <ClCompile Include="..\..\zen\file_traverser.cpp" />
     <ClCompile Include="..\..\zen\format_unit.cpp" />
-    <ClCompile Include="..\..\zen\privilege.cpp" />
+    <!--  <ClCompile Include="..\..\zen\privilege.cpp" />  -->
     <ClCompile Include="..\..\zen\process_priority.cpp" />
     <ClCompile Include="..\..\zen\recycler.cpp" />
     <ClCompile Include="..\..\zen\zstring.cpp" />
@@ -234,18 +234,18 @@
     <ClCompile Include="lib\perf_check.cpp" />
     <ClCompile Include="lib\process_xml.cpp" />
     <ClCompile Include="lib\resolve_path.cpp" />
-    <ClCompile Include="lib\shadow.cpp" />
+    <!-- <ClCompile Include="lib\shadow.cpp" />  -->
     <ClCompile Include="lib\status_handler.cpp" />
     <ClCompile Include="lib\versioning.cpp" />
-    <ClCompile Include="lib\xml_base.cpp" />
+    <!-- <ClCompile Include="lib\xml_base.cpp" /> -->
     <ClCompile Include="structures.cpp" />
     <ClCompile Include="synchronization.cpp" />
     <ClCompile Include="ui\batch_config.cpp" />
     <ClCompile Include="ui\batch_status_handler.cpp" />
     <ClCompile Include="ui\check_version.cpp" />
     <ClCompile Include="ui\custom_grid.cpp" />
-    <ClCompile Include="ui\dir_name.cpp" />
-    <ClCompile Include="ui\exec_finished_box.cpp" />
+    <!-- <ClCompile Include="ui\dir_name.cpp" />  -->
+    <!-- <ClCompile Include="ui\exec_finished_box.cpp" />  -->
     <ClCompile Include="ui\folder_history_box.cpp" />
     <ClCompile Include="ui\grid_view.cpp" />
     <ClCompile Include="ui\gui_generated.cpp" />
@@ -261,4 +261,5 @@
     <ClCompile Include="ui\triple_splitter.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+
 </Project>
