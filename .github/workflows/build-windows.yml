@@ -1,11 +1,15 @@
 name: Build FreeFileSync 7.0 Windows
 
 on:
-  workflow_dispatch:  # 支持手动点运行
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   build:
-    runs-on: windows-latest  # 会给你 VS2022 + MSBuild 的 Windows 机器
+    runs-on: windows-latest
 
     steps:
       - name: Checkout repository
@@ -16,24 +20,27 @@ jobs:
         with:
           msbuild-architecture: x64
 
-      - name: Show tree (debug 可选，先留着排错方便)
+      # 仅用于确认目录结构，方便以后排错
+      - name: Show tree
         run: |
           pwd
           dir
           dir FreeFileSync
           dir FreeFileSync\Source
 
-      - name: Build FreeFileSync (Release x64)
+      - name: Build FreeFileSync (Release x64, VS2022 toolset)
         run: |
           msbuild FreeFileSync/Source/FreeFileSync.vcxproj `
             /p:Configuration=Release `
-            /p:Platform=x64
+            /p:Platform=x64 `
+            /p:PlatformToolset=v143
 
-      - name: Build RealtimeSync (Release x64)
+      - name: Build RealtimeSync (Release x64, VS2022 toolset)
         run: |
           msbuild FreeFileSync/Source/RealtimeSync/RealtimeSync.vcxproj `
             /p:Configuration=Release `
-            /p:Platform=x64
+            /p:Platform=x64 `
+            /p:PlatformToolset=v143
 
       - name: Upload built executables
         uses: actions/upload-artifact@v4
