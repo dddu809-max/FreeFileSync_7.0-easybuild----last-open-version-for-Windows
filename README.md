@@ -37,7 +37,7 @@ wx+/grid.h
 
 头文件：
 
-dll.h
+dll.h   MinFFS有
 
 源码：
 
