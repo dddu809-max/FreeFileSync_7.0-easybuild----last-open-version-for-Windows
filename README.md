@@ -70,3 +70,5 @@ ui\exec_finished_box.cpp（通过 /ui/exec_finished_box.cpp、\ui\exec_finished_
 这就正好对应你说的第二类：
 
 要么找原作者，要么去挖别的第三方移植（他们可能自己写过一份实现），再要么就自己读现在的代码，手搓一个功能等价的替代实现。
+
+真正棘手的只有这 7 个 .cpp + 1 个 dll.h，它们是当前公开源码体系之外的幽灵文件；
