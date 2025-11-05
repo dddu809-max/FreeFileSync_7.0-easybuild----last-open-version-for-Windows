@@ -1,6 +1,14 @@
 ## 其他人构建的Windows 版本的 ffs
 https://github.com/abcdec/MinFFS/
 
+.
+
+.
+
+.
+
+.
+
 第一类（公开能拿到的）
 
 来自 wxWidgets 的：
